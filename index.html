@@ -22,6 +22,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -32,8 +37,8 @@
             >Web<span class="header-logo-span">Studio</span></a
           >
           <ul class="header-list list">
-            <li class="header-item">
-              <a href="./index.html" class="header-link link">Студія</a>
+            <li class="header-item ">
+              <a href="./index.html" class="header-link link current">Студія</a>
             </li>
             <li class="header-item">
               <a href="./portfolio.html" class="header-link link">Портфоліо</a>
@@ -61,12 +66,10 @@
       </div>
     </header>
     <main>
-
-
       <section class="hero">
         <div class="conteiner">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="hero-btn hero-btn-text">
+          <button type="button" class="hero-btn hero-btn-text"data-modal-open >
             Замовити послугу
           </button>
         </div>
@@ -134,6 +137,9 @@
           <h2 class="about-title">Чим ми займаємося</h2>
           <ul class="about-list list">
             <li class="about-item">
+              <div class="about-after-title">
+                <h3 class="about-past-title">Десктопні додатки</h3>
+              </div>
               <img
                 src="./img/img/img-1.jpg"
                 alt="верстка"
@@ -142,6 +148,9 @@
               />
             </li>
             <li class="about-item">
+              <div class="about-after-title">
+                <h3 class="about-past-title">Мобільні додатки</h3>
+              </div>
               <img
                 src="./img/img/img-2.jpg"
                 alt="дизайн"
@@ -150,6 +159,9 @@
               />
             </li>
             <li class="about-item">
+              <div class="about-after-title">
+                <h3 class="about-past-title">Дизайнерські рішення</h3>
+              </div>
               <img
                 src="./img/img/img-3.jpg"
                 alt="зовнішні оформлення"
@@ -160,8 +172,6 @@
           </ul>
         </div>
       </section>
-
-
       <section class="section team-section">
         <div class="conteiner">
           <h2 class="comand-item">Наша команда</h2>
@@ -334,8 +344,7 @@
             <a href="" class="clients-link link">
               <svg class="clients-icon1" width="106" height="60">
                 <use href="./img/icon.svg#icon-Logo1"></use></svg></a>
-          </li>
-  
+              </li>
           <li class="clients-item">
             <a href="" class="clients-link link">
               <svg class="clients-icon1" width="106" height="60">
@@ -347,13 +356,11 @@
               <svg class="clients-icon1" width="106" height="60">
                 <use href="./img/icon.svg#icon-Logo3"></use></svg></a>
           </li>
-  
           <li class="clients-item">
             <a href="" class="clients-link link">
               <svg class="clients-icon1" width="106" height="60">
                 <use href="./img/icon.svg#icon-Logo4"></use></svg></a>
-          </li>
-  
+              </li>
           <li class="clients-item">
             <a href="" class="clients-link link">
               <svg class="clients-icon1" width="106" height="60">
@@ -363,10 +370,6 @@
       </div>
       </section>
     </main>
-    
-  
-    
-  
     <footer class="footer">
       <div class="conteiner footer-conteiner">
         <div>
@@ -431,7 +434,19 @@
           </ul>
         </div>
       </div>
-      
     </footer>
+<div class="backdrop" data-modal>
+  <div class="modal">
+    <button type="button" class="modal-close"data-modal-close> <svg class="modal-icon" width="11" height="11">
+      <use href="./img/icon.svg#icon-Vector3"></use>
+    </svg>
+  </button>
+  </div>
+</div>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./js/modal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>
