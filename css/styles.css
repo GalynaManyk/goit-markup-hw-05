@@ -159,7 +159,6 @@ img {
 .header-icon {
   fill: currentColor;
   align-items: center;
-  transition: color var(--main-hover);
 }
 
 .header-tel {
@@ -299,6 +298,7 @@ img {
 .about {
   padding-top: 0px;
 }
+.about-item {position: relative;}
 
 .about-list {
   display: flex;
@@ -325,7 +325,8 @@ img {
   background: rgba(47, 48, 58, 0.8);
   align-items: center;
   justify-content: center;
-  bottom: -1px;
+  bottom: 0px;
+  left: 0;
 }
 
 .about-past-title {
@@ -334,12 +335,10 @@ img {
   line-height: 1.14;
   text-align: center;
   align-items: center;
-  margin: 0 auto;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
   display: flex;
-  position: absolute;
 }
 
 .team-section {
@@ -475,7 +474,7 @@ img {
   justify-content: center;
   fill: #afb1bb;
   transition: fill var(--main-hover);
-  border-color: var(--main-hover);
+  transition: border-color  var(--main-hover); ;
 }
 
 .clients-title {
@@ -510,6 +509,8 @@ img {
   text-align: center;
   border-radius: 4px;
   transition: background-color var(--main-hover);
+  transition: color var(--main-hover) ;
+  transition: box-shadow var(--main-hover);
 }
 
 .filtr-btn:hover,
@@ -550,8 +551,11 @@ img {
 }
 .project-item {
   width: calc((100%-60px) / 3);
-  transition: box-shadow var(--main-hover);
-}
+  transition: box-shadow var(--main-hover);}
+
+  .project-link {display: block;
+  transition:box-shadow var(--main-hover) ;}
+  
 
 .project-link:hover .project-item:nth-child(3n) {
   margin-right: 0;
@@ -589,33 +593,27 @@ img {
   color: var(--second-title-color);
   padding-top: 0px;
 }
-
 .project-top-text {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.55;
-  letter-spacing: 0.03em;
-  color: #ffffff;
-  align-items: center;
-  padding-top: 63px;
-  padding-right: 24px;
-  padding-bottom: 63px;
-  padding-left: 24px;
   position: absolute;
-  width: 370px;
-  height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
-  top: 0;
-  left: 0;
-  transform: translateY(100%);
-  transition: transform 300ms linear;
-  overflow: auto;
+  font-weight: 400;
+font-size: 18px;
+line-height: 1.55;
+letter-spacing: 0.03em;
+background: rgba(33, 150, 243, 0.9);
+color: #FFFFFF;
+top:0;
+left:0;
+padding-top: 63px;
+padding-right: 24px;
+padding-bottom: 63px;
+padding-left: 24px;
+height: 100%;
+transform: translateY(100%);
+transition:transform 300ms linear ;
+overflow: auto;
 }
-.project-top-box {
-  position: relative;
-  overflow: hidden;
-}
+.project-box-text {position: relative;
+overflow: hidden;}
 
 .project-item:hover .project-top-text {
   transform: translateY(0);
